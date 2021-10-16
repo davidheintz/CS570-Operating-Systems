@@ -1,0 +1,23 @@
+#Variables
+CC = g++	#change to gcc for C
+CFLAGS = -c -Wall
+OBJS = myls.cpp	#more .o here
+
+#run as 'make'
+all: main.o
+
+main.o: $(OBJS)
+	#GNU compile myls.cpp into main and run
+	g++ myls.cpp -o main -std=c++11
+	./main myls
+
+#repeat block for all objects 
+DEPS1 = myls.cpp
+
+myls.o: $(DEPS1)
+	g++ myls.cpp #GNU compile object file
+#end repeat
+
+#run as 'make clean'
+clean:
+	$(RM) main #remove object
