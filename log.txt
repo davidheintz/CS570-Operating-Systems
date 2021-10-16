@@ -1,0 +1,117 @@
+Script started on Thu Feb  4 12:33:08 2021
+]0;cssc3321@edoras:~/A1[?1034h[cssc3321@edoras A1]$ make
+#GNU compile myls.cpp into main and run
+g++ myls.cpp -o main -std=c++11
+./main myls
+boot
+dev
+home
+proc
+run
+sys
+tmp
+var
+etc
+root
+usr
+bin
+sbin
+lib
+lib64
+media
+mnt
+opt
+srv
+include
+nsr
+snap
+copyright
+release
+iso
+terminate called without an active exception
+make: *** [main.o] Aborted
+]0;cssc3321@edoras:~/A1[cssc3321@edoras A1]$ main myls example
+example
+file1.txt
+file2.txt
+file3.txt
+inner folder
+sec folder
+
+]0;cssc3321@edoras:~/A1[cssc3321@edoras A1]$ main myls -h example
+example
+.
+..
+...text.txt
+.ex.txt
+file1.txt
+file2.txt
+file3.txt
+inner folder
+sec folder
+
+]0;cssc3321@edoras:~/A1[cssc3321@edoras A1]$ main myls example1 example2
+example1
+Cannot access example1
+
+example2
+first.txt
+second.txt
+third.txt
+
+]0;cssc3321@edoras:~/A1[cssc3321@edoras A1]$ main myls example example2
+example
+file1.txt
+file2.txt
+file3.txt
+inner folder
+sec folder
+
+example2
+first.txt
+second.txt
+third.txt
+
+]0;cssc3321@edoras:~/A1[cssc3321@edoras A1]$ main 
+terminate called after throwing an instance of 'std::logic_error'
+  what():  basic_string::_S_construct null not valid
+Aborted
+]0;cssc3321@edoras:~/A1[cssc3321@edoras A1]$ main myls dir
+dir
+Cannot access dir
+
+]0;cssc3321@edoras:~/A1[cssc3321@edoras A1]$ main myls 
+boot
+dev
+home
+proc
+run
+sys
+tmp
+var
+etc
+root
+usr
+bin
+sbin
+lib
+lib64
+media
+mnt
+opt
+srv
+include
+nsr
+snap
+copyright
+release
+iso
+terminate called without an active exception
+Aborted
+]0;cssc3321@edoras:~/A1[cssc3321@edoras A1]$ make clean
+rm -f main #remove object
+]0;cssc3321@edoras:~/A1[cssc3321@edoras A1]$ ls
+[0m[38;5;27mexample[0m  [38;5;27mexample2[0m  log.txt  makefile  myls.cpp
+]0;cssc3321@edoras:~/A1[cssc3321@edoras A1]$ exit
+
+Script done on Thu Feb  4 12:35:34 2021
